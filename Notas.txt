@@ -1,0 +1,9 @@
+# https://srtm.csi.cgiar.org/srtmdata/
+# Para descargar los archvos requeridos. 
+# Como son muy grandes se descargaron solo los de Uruguay
+
+docker run -d --restart always -p 8181:8080 spymovil/open-elevation 
+
+curl http://127.0.0.1:82/api/v1/lookup\?locations\=10,10\|20,20\|-34.737624,-56.097297
+
+curl http://openelevation.spymovil.com/api/v1/lookup\?locations\=10,10\|-34.737624,-56.097297
